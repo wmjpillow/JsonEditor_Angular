@@ -3,7 +3,6 @@ import * as JSONEditor from 'jsoneditor';
 import { ConfirmResetComponent } from './confirm-reset/confirm-reset.component';
 import { MatDialog } from '@angular/material/dialog';
 import { HttpClient } from "@angular/common/http";
-// import * as Admin from './admin.json';
 
 @Component({
     selector: 'app-json',
@@ -36,9 +35,9 @@ export class AppComponent implements OnInit {
                     if (json) {
                         this.jsonCode = json;
                         this.setLocalStorage('jsonCode', JSON.stringify(json));
-                        if (this.autoConvert) {
+                        // if (this.autoConvert) {
                             this.validateJSON('Tree');
-                        }
+                        // }
                     }
                 }
             },
@@ -62,10 +61,10 @@ export class AppComponent implements OnInit {
             console.log(data);
             this.autoConvert = JSON.parse(localStorage.getItem('autoConvertJSON'));
             this.jsonCode = localStorage.getItem('jsonCode') ? JSON.parse(localStorage.getItem('jsonCode')) : data;
-            this.validateJSON('Code');
-            if (this.autoConvert) {
-                this.validateJSON('Tree');
-            }
+            this.validateJSON('Tree');
+            // if (this.autoConvert) {
+                this.validateJSON('Code');
+            // }
           })
   
     }
