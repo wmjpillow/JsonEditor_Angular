@@ -15,7 +15,6 @@ export class AppComponent implements OnInit {
     options: any;
     jsonEditorCode: any;
     jsonEditorTree: any;
-    // darkMode: boolean;
     autoConvert: boolean;
     jsonCode: any;
     products: any = [];
