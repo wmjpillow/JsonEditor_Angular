@@ -1,0 +1,562 @@
+{
+    "global": {
+        "actionsData": {
+            "mainTrayActions": [
+                {
+                    "groupHeading": "Hardware",
+                    "subGroups": [
+                        {
+                            "actions": [
+                                {
+                                    "actionID": "CACO",
+                                    "status": false
+                                },
+                                {
+                                    "actionID": "BLUE",
+                                    "status": true
+                                },
+                                {
+                                    "actionID": "WIFI",
+                                    "status": false
+                                },
+                                {
+                                    "actionID": "PRTS",
+                                    "status": true
+                                },
+                                {
+                                    "actionID": "GPSO",
+                                    "status": true
+                                },
+                                {
+                                    "actionID": "NETF",
+                                    "status": true
+                                }
+                            ],
+                            "name": ""
+                        },
+                        {
+                            "actions": [
+                            ],
+                            "name": "Settings:"
+                        }
+                    ]
+                },
+                {
+                    "groupHeading": "System",
+                    "subGroups": [
+                        {
+                            "actions": [
+                                {
+                                    "actionID": "CCHK",
+                                    "status": true
+                                },
+                                {
+                                    "actionID": "LOCL",
+                                    "status": true
+                                },
+                                {
+                                    "actionID": "DSPL",
+                                    "status": true
+                                },
+                                {
+                                    "actionID": "PWMT",
+                                    "status": true
+                                },
+                                {
+                                    "actionID": "SFTY",
+                                    "status": true
+                                },
+                                {
+                                    "actionID": "SOND",
+                                    "status": true
+                                },
+                                {
+                                    "actionID": "STAT",
+                                    "status": true
+                                },
+                                {
+                                    "actionID": "ABOT",
+                                    "status": true
+                                },
+                                {
+                                    "actionID": "SYDT",
+                                    "status": true
+                                },
+                                {
+                                    "actionID": "CLST",
+                                    "status": true
+                                },
+                                {
+                                    "actionID": "BCUP",
+                                    "status": false
+                                },
+                                {
+                                    "actionID": "LOGT",
+                                    "status": true
+                                }
+                            ],
+                            "name": ""
+                        }
+                    ]
+                }
+            ],
+            "navigationBarActions": {
+                "": [
+                ],
+                "ADCT": [
+                    "ADLR",
+                    "RMLR",
+                    "EDCT"
+                ],
+                "ADPS": [
+                    "ADPE",
+                    "DEPE",
+                    "EDPD",
+                    "LSPT"
+                ],
+                "AVRG": [
+                ],
+                "BACH": [
+                    "SHDN"
+                ],
+                "BCUP": [
+                    "CHBU"
+                ],
+                "BLDT": [
+                    "FORG",
+                    "CNCT",
+                    "PAIR"
+                ],
+                "CLST": [
+                    "CHSR",
+                    "AUSR"
+                ],
+                "CMPD": [
+                    "ADDF",
+                    "DELF",
+                    "EDTF"
+                ],
+                "CMRA": [
+                    "LIVE",
+                    "DELP",
+                    "FLIP"
+                ],
+                "COAT": [
+                    "ADDC",
+                    "EDTC",
+                    "DECT"
+                ],
+                "COTM": [
+                    "ADDF",
+                    "DELF"
+                ],
+                "DTCT": [
+                    "STCT"
+                ],
+                "EDPE": [
+                    "ADDF",
+                    "EDTF",
+                    "DELF"
+                ],
+                "EDTM": [
+                    "STDT",
+                    "CLGM",
+                    "CLON",
+                    "DEPM",
+                    "DELM"
+                ],
+                "EFAC": [
+                    "EFAS"
+                ],
+                "EFRP": [
+                    "EFRS"
+                ],
+                "ELOR": [
+                    "HELP"
+                ],
+                "ELSU": [
+                    "HELP"
+                ],
+                "EXPO": [
+                ],
+                "FACS": [
+                    "EFAT",
+                    "QCSM"
+                ],
+                "FAQC": [
+                    "QCST",
+                    "QCDN",
+                    "QCUP"
+                ],
+                "FERG": [
+                    "EFRG",
+                    "FSRG"
+                ],
+                "FMCN": [
+                    "MCLN",
+                    "MCRN",
+                    "MEND",
+                    "MDEL"
+                ],
+                "FSTB": [
+                    "FSSB"
+                ],
+                "GMEL": [
+                    "GMED",
+                    "GMAD",
+                    "GMDL",
+                    "GMCL"
+                ],
+                "GMGE": [
+                    "GMAD",
+                    "GMDE"
+                ],
+                "GMLB": [
+                    "GMED",
+                    "GMCL"
+                ],
+                "HWCK": [
+                    "HCTB",
+                    "HCMC",
+                    "HCFT"
+                ],
+                "LEPT": [
+                    "DIST"
+                ],
+                "LIVE": [
+                    "LIVE",
+                    "BEAM",
+                    "RSHY",
+                    "GMCH"
+                ],
+                "LOGH": [
+                    "RFSH",
+                    "WRAP",
+                    "EXKL"
+                ],
+                "LOGK": [
+                    "RFSH",
+                    "WRAP",
+                    "EXKL"
+                ],
+                "LSPS": [
+                    "ADPG",
+                    "DEPG",
+                    "EDPG"
+                ],
+                "MBBR": [
+                    "REGT",
+                    "EXPT"
+                ],
+                "NETF": [
+                    "ADDF"
+                ],
+                "PROF": [
+                    "SYNC",
+                    "COMT",
+                    "LOAD",
+                    "PUSH"
+                ],
+                "PSDO": [
+                    "ADPT",
+                    "EDPS",
+                    "DEPS"
+                ],
+                "RASU": [
+                    "STRA",
+                    "EDRS"
+                ],
+                "RMEC": [
+                    "RMDI"
+                ],
+                "RSDF": [
+                    "CHPB"
+                ],
+                "RSHY": [
+                    "PRNT",
+                    "DELT",
+                    "EXPT",
+                    "AVRG"
+                ],
+                "RSVW": [
+                    "PRNT",
+                    "EXPT"
+                ],
+                "SPCT": [
+                    "STRT"
+                ],
+                "SRAP": [
+                    "CHSR",
+                    "AUSR"
+                ],
+                "SRFR": [
+                    "DLUP"
+                ],
+                "STAT": [
+                ],
+                "STIN": [
+                    "SDCD",
+                    "USBE"
+                ],
+                "TRND": [
+                    "ADDF",
+                    "DELF",
+                    "EDTF"
+                ],
+                "TRTM": [
+                    "ADDF",
+                    "DELF",
+                    "EDTF"
+                ],
+                "USEF": [
+                    "ADDF",
+                    "DELF"
+                ],
+                "WIFI": [
+                    "WFCN"
+                ],
+                "WIST": [
+                    "WIAC"
+                ]
+            }
+        },
+        "cloudSettings": {
+            "enabled": true
+        },
+        "editedBy": "FleetManager",
+        "editedTime": "Wed May 16 10:46:51 2018",
+        "hardware": {
+            "GPS": {
+                "enable": false
+            },
+            "dumpRates": false,
+            "wiFi": {
+                "enable": true
+            }
+        },
+        "methodId": "alloyPlus-Rh",
+        "methods": [
+            {
+                "enable": true,
+                "factoryOnly": false,
+                "hasSafeCollimatedBeam": true,
+                "hasSafeUncollimatedBeam": false,
+                "id": "alloyPlus-AlloyPlus BigSet",
+                "isClonedMethod": false,
+                "isFactorSetted": true,
+                "isMbMethod": false,
+                "mnemonic": "A+",
+                "name": "AlloyPlus BigSet"
+            },
+            {
+                "enable": true,
+                "factoryOnly": false,
+                "hasSafeCollimatedBeam": true,
+                "hasSafeUncollimatedBeam": false,
+                "id": "alloyPlus-BigSet-Rh",
+                "isClonedMethod": false,
+                "isFactorSetted": true,
+                "isMbMethod": false,
+                "mnemonic": "A+",
+                "name": "AlloyPlus BigSet"
+            },
+            {
+                "enable": true,
+                "factoryOnly": false,
+                "hasSafeCollimatedBeam": true,
+                "hasSafeUncollimatedBeam": false,
+                "id": "alloyPlus-Rh",
+                "isClonedMethod": false,
+                "isFactorSetted": true,
+                "isMbMethod": false,
+                "mnemonic": "A+",
+                "name": "AlloyPlus"
+            },
+            {
+                "enable": true,
+                "factoryOnly": false,
+                "hasSafeCollimatedBeam": true,
+                "hasSafeUncollimatedBeam": false,
+                "id": "coating-VMR",
+                "isClonedMethod": false,
+                "isFactorSetted": true,
+                "isMbMethod": false,
+                "mnemonic": "Co",
+                "name": "Coating"
+            },
+            {
+                "enable": true,
+                "factoryOnly": false,
+                "hasSafeCollimatedBeam": true,
+                "hasSafeUncollimatedBeam": false,
+                "id": "geoChem-Rh",
+                "isClonedMethod": false,
+                "isFactorSetted": true,
+                "isMbMethod": false,
+                "mnemonic": "GC",
+                "name": "Geochem(2)"
+            },
+            {
+                "enable": true,
+                "factoryOnly": false,
+                "hasSafeCollimatedBeam": true,
+                "hasSafeUncollimatedBeam": false,
+                "id": "geoChem-Rh-Ree",
+                "isClonedMethod": false,
+                "isFactorSetted": true,
+                "isMbMethod": false,
+                "mnemonic": "GC",
+                "name": "GeoChem REE(2)"
+            },
+            {
+                "enable": true,
+                "factoryOnly": false,
+                "hasSafeCollimatedBeam": true,
+                "hasSafeUncollimatedBeam": false,
+                "id": "ip65Oil-VCR",
+                "isClonedMethod": false,
+                "isFactorSetted": true,
+                "isMbMethod": false,
+                "mnemonic": "ss",
+                "name": "IP 65 Oil"
+            },
+            {
+                "enable": true,
+                "factoryOnly": false,
+                "hasSafeCollimatedBeam": true,
+                "hasSafeUncollimatedBeam": false,
+                "id": "leadPaint-VMR",
+                "isClonedMethod": false,
+                "isFactorSetted": true,
+                "isMbMethod": false,
+                "mnemonic": "LD",
+                "name": "LeadPaint"
+            },
+            {
+                "enable": true,
+                "factoryOnly": false,
+                "hasSafeCollimatedBeam": true,
+                "hasSafeUncollimatedBeam": false,
+                "id": "preciousMetal-Rh",
+                "isClonedMethod": false,
+                "isFactorSetted": true,
+                "isMbMethod": false,
+                "mnemonic": "PM",
+                "name": "Precious Metals"
+            },
+            {
+                "enable": true,
+                "factoryOnly": false,
+                "hasSafeCollimatedBeam": true,
+                "hasSafeUncollimatedBeam": false,
+                "id": "rohs",
+                "isClonedMethod": true,
+                "isFactorSetted": true,
+                "isMbMethod": false,
+                "mnemonic": "R2",
+                "name": "RoHS"
+            },
+            {
+                "enable": true,
+                "factoryOnly": false,
+                "hasSafeCollimatedBeam": true,
+                "hasSafeUncollimatedBeam": false,
+                "id": "rohsPlus",
+                "isClonedMethod": false,
+                "isFactorSetted": true,
+                "isMbMethod": false,
+                "mnemonic": "R4",
+                "name": "RoHS Plus"
+            },
+            {
+                "enable": true,
+                "factoryOnly": false,
+                "hasSafeCollimatedBeam": true,
+                "hasSafeUncollimatedBeam": false,
+                "id": "soil-VMR",
+                "isClonedMethod": false,
+                "isFactorSetted": true,
+                "isMbMethod": false,
+                "mnemonic": "ss",
+                "name": "Soil"
+            }
+        ],
+        "print": {
+            "autoPrint": false,
+            "paperTypeList": [
+                "roll",
+                "label",
+                "a4"
+            ],
+            "paperTypeSelected": "roll",
+            "printOptions": {
+                "customOrder": [
+                    "Cd",
+                    "Cr",
+                    "Fe"
+                ],
+                "elementOrder": "ByZNumber",
+                "showAuKaratDecimal": 2,
+                "showAuKaratOrFineness": 1,
+                "showEstimatedLOD": 0,
+                "showPlateAlert": 1,
+                "showUncertainty": 1
+            },
+            "printerTypeList": {
+                "type1": "Bluetooth Printer",
+                "type2": "USB Printer"
+            },
+            "selectedPrinter": "Bluetooth Printer",
+            "selectedTemplate": "zebraPrinter",
+            "showFullResult": false,
+            "showHeaderOnPageBreak": true
+        },
+        "system": {
+            "camera": {
+                "LedBrightness": 25,
+                "aimingCameraEnable": true,
+                "cameraCollimator": false,
+                "defaultView": 0,
+                "sampleCameraEnable": true
+            },
+            "dateTime": {
+                "disableDayLightSaving": true,
+                "is24HourFormat": false,
+                "isAutoDateTime": true
+            },
+            "display": {
+                "backlight": 132,
+                "backlightLevel": 3,
+                "font": 1,
+                "screenRotation": true
+            },
+            "power": {
+                "fanEnabled": true,
+                "screenSleepTimeout": 30,
+                "standbyTimeout": 0
+            },
+            "safety": {
+                "deadManTrigger": false,
+                "frenchMode": false,
+                "proximitySensor": false,
+                "testStandRequired": false,
+                "testStandRequiredFor50kV": false,
+                "triggerLock": {
+                    "enable": false,
+                    "lockAfter": 0
+                },
+                "watchdogEnabled": true
+            },
+            "sound": {
+                "atLogin": false,
+                "beepOnGM": false,
+                "click": false,
+                "safetyAlert": {
+                    "mode": "none",
+                    "occasion": "none"
+                },
+                "volume": 0
+            }
+        }
+    }
+}
