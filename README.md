@@ -5,3 +5,5 @@ This is a project of json editor using Angular Framework and connect to company 
 # REFERENCE
 https://krispo.github.io/json-tree/
 
+https://github.com/AjinkyaBijwe/Json-Editor
+
