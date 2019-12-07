@@ -55,7 +55,7 @@ export class AppComponent implements OnInit {
         this.jsonEditorCode = new JSONEditor(document.getElementById('jsonEditorCode'), this.options.code);
         this.jsonEditorTree = new JSONEditor(document.getElementById('jsonEditorTree'), this.options.tree);
         // this.setDefaultOptions();
-        this.httpClient.get("assets/admin.json").subscribe(data =>{
+        this.httpClient.get("assets/json/admin.json").subscribe(data =>{
             data;
             console.log(data);
             this.autoConvert = JSON.parse(localStorage.getItem('autoConvertJSON'));
