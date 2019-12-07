@@ -93,27 +93,4 @@ export class AppComponent implements OnInit {
             }
         });
     }
-
-    // setDefaultOptions = () => {
-    //     this.autoConvert = JSON.parse(localStorage.getItem('autoConvertJSON'));
-    //     // this.jsonCode = localStorage.getItem('jsonCode');
-    //     this.jsonCode = localStorage.getItem('jsonCode') ? JSON.parse(localStorage.getItem('jsonCode')) : data
-
-
-    //         // Array: [1, 2, 3],
-    //         // Boolean: true,
-    //         // Null: null,
-    //         // Number: 123,
-    //         // Object: {
-    //         //     a: 'b',
-    //         //     c: 'd'
-    //         // },
-    //         // String: 'Hello World'
-
-
-    //     this.validateJSON('Code');
-    //     if (this.autoConvert) {
-    //         this.validateJSON('Tree');
-    //     }
-    // }
 }
