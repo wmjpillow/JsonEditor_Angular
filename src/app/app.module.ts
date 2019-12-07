@@ -40,11 +40,13 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 import { ConfirmResetComponent } from './confirm-reset/confirm-reset.component';
+import { JsonEditorComponent } from './json-editor/json-editor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ConfirmResetComponent
+    ConfirmResetComponent,
+    JsonEditorComponent
   ],
   imports: [
     BrowserModule,
