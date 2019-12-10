@@ -41,6 +41,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 import { ConfirmResetComponent } from './confirm-reset/confirm-reset.component';
 import { JsonEditorComponent } from './json-editor/json-editor.component';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -89,7 +90,12 @@ import { JsonEditorComponent } from './json-editor/json-editor.component';
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
-    MatTreeModule
+    MatTreeModule,
+    RouterModule.forRoot([
+      {path: '', component: JsonEditorComponent},
+      {path: 'search', component:AppComponent}
+
+    ])
   ],
   providers: [],
   entryComponents: [ConfirmResetComponent],

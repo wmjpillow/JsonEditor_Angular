@@ -1,14 +1,1 @@
-<mat-toolbar color="primary" class="title mat-elevation-z6">
-	JSON Editor
-	<button mat-raised-button color="warn" class="reset" (click)="clearStorageOptions()" style="text-transform: uppercase;">
-		Reset Storage
-	</button>
-</mat-toolbar>
-<div class="wrapper">
-	<div id="jsonEditorTree" class="right"></div>
-	<div id="jsonEditorCode" class="left"></div>
-	<mat-checkbox class="json-option" [(ngModel)]="autoConvert" (change)="setLocalStorage('autoConvertJSON', autoConvert)">
-		Auto Convert JSON
-	</mat-checkbox>
-
-</div>
+<router-outlet></router-outlet>
