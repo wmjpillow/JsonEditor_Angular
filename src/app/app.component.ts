@@ -3,91 +3,81 @@ import * as JSONEditor from 'jsoneditor';
 import { ConfirmResetComponent } from './confirm-reset/confirm-reset.component';
 import { MatDialog } from '@angular/material/dialog';
 import { HttpClient } from "@angular/common/http";
+import { UploadOutput, UploadInput, UploadFile, humanizeBytes, UploaderOptions, UploadStatus } from 'ngx-uploader';
+import { EventEmitter } from '@angular/core';
 
 @Component({
     selector: 'app-json',
     templateUrl: './app.component.html'
 })
 
-export class AppComponent implements OnInit {
-    // dialog: MatDialog;
-    // renderer: Renderer2;
-    // options: any;
-    // jsonEditorCode: any;
-    // jsonEditorTree: any;
-    // autoConvert: boolean;
-    // jsonCode: any;
-    // products: any = [];
+export class AppComponent {
+
+    url = 'http://localhost:4900/upload';
+    formData: FormData;
+    files: UploadFile[];
+    uploadInput: EventEmitter<UploadInput>;
+    humanizeBytes: Function;
+    dragOver: boolean;
+    options: UploaderOptions;
 
     constructor() {
+        this.options = { concurrency: 1, maxUploads: 3, maxFileSize: 1000000 };
+        this.files = [];
+        this.uploadInput = new EventEmitter<UploadInput>();
+        this.humanizeBytes = humanizeBytes;
     }
 
-    ngOnInit() {
-    //     this.options = {
-    //         code : {
-    //             mode: 'code',
-    //             onChange: () => {
-    //                 const json = this.jsonEditorCode.get();
-    //                 if (json) {
-    //                     this.jsonCode = json;
-    //                     this.setLocalStorage('jsonCode', JSON.stringify(json));
-    //                     // if (this.autoConvert) {
-    //                         this.validateJSON('Tree');
-    //                     // }
-    //                 }
-    //             }
-    //         },
-    //         tree : {
-    //             mode: 'tree',
-    //             onChange: () => {
-    //                 const json = this.jsonEditorTree.get();
-    //                 if (json) {
-    //                     this.jsonCode = json;
-    //                     this.setLocalStorage('jsonCode', JSON.stringify(json));
-    //                     this.validateJSON('Code');
-    //                 }
-    //             }
-    //         }
-    //     };
-    //     this.jsonEditorCode = new JSONEditor(document.getElementById('jsonEditorCode'), this.options.code);
-    //     this.jsonEditorTree = new JSONEditor(document.getElementById('jsonEditorTree'), this.options.tree);
-    //     // this.setDefaultOptions();
-    //     this.httpClient.get("assets/json/admin.json").subscribe(data =>{
-    //         data;
-    //         console.log(data);
-    //         this.autoConvert = JSON.parse(localStorage.getItem('autoConvertJSON'));
-    //         this.jsonCode = localStorage.getItem('jsonCode') ? JSON.parse(localStorage.getItem('jsonCode')) : data;
-    //         this.validateJSON('Tree');
-    //         // if (this.autoConvert) {
-    //             this.validateJSON('Code');
-    //         // }
-    //       })
-  
-    // }
-
-    // validateJSON = (type) => {
-    //     if (type === 'Tree') {
-    //         this.jsonEditorTree.set(this.jsonCode);
-    //     } else if (type === 'Code') {
-    //         this.jsonEditorCode.set(this.jsonCode);
-    //     }
-    // }
-
-    // setLocalStorage = (key, value) => {
-    //     localStorage.setItem(key, value);
-    // }
-
-    // clearStorageOptions = () => {
-    //     const dialogRef = this.dialog.open(ConfirmResetComponent, {
-    //         restoreFocus: false
-    //     });
-
-    //     dialogRef.afterClosed().subscribe((result) => {
-    //         if (result) {
-    //             localStorage.removeItem('jsonCode');
-    //             localStorage.removeItem('autoConvertJSON');
-    //             // this.setDefaultOptions();
-    //         }
-    //     });
-    }
+    onUploadOutput(output: UploadOutput): void {
+        if (output.type === 'allAddedToQueue') {
+          const event: UploadInput = {
+            type: 'uploadAll',
+            url: this.url,
+            method: 'POST',
+            data: { foo: 'bar' }
+          };
+    
+          this.uploadInput.emit(event);
+        } else if (output.type === 'addedToQueue' && typeof output.file !== 'undefined') {
+          this.files.push(output.file);
+        } else if (output.type === 'uploading' && typeof output.file !== 'undefined') {
+          const index = this.files.findIndex(file => typeof output.file !== 'undefined' && file.id === output.file.id);
+          this.files[index] = output.file;
+        } else if (output.type === 'cancelled' || output.type === 'removed') {
+          this.files = this.files.filter((file: UploadFile) => file !== output.file);
+        } else if (output.type === 'dragOver') {
+          this.dragOver = true;
+        } else if (output.type === 'dragOut') {
+          this.dragOver = false;
+        } else if (output.type === 'drop') {
+          this.dragOver = false;
+        } else if (output.type === 'rejected' && typeof output.file !== 'undefined') {
+          console.log(output.file.name + ' rejected');
+        }
+    
+        this.files = this.files.filter(file => file.progress.status !== UploadStatus.Done);
+      }
+    
+      startUpload(): void {
+        const event: UploadInput = {
+          type: 'uploadAll',
+          url: this.url,
+          method: 'POST',
+          data: { foo: 'bar' }
+        };
+    
+        this.uploadInput.emit(event);
+      }
+    
+      cancelUpload(id: string): void {
+        this.uploadInput.emit({ type: 'cancel', id: id });
+      }
+    
+      removeFile(id: string): void {
+        this.uploadInput.emit({ type: 'remove', id: id });
+      }
+    
+      removeAllFiles(): void {
+        this.uploadInput.emit({ type: 'removeAll' });
+      }
 }

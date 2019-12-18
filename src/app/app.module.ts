@@ -42,6 +42,7 @@ import { MatTreeModule } from '@angular/material/tree';
 import { ConfirmResetComponent } from './confirm-reset/confirm-reset.component';
 import { JsonEditorComponent } from './json-editor/json-editor.component';
 import {RouterModule} from '@angular/router';
+import { NgxUploaderModule } from 'ngx-uploader';
 
 @NgModule({
   declarations: [
@@ -91,6 +92,7 @@ import {RouterModule} from '@angular/router';
     MatToolbarModule,
     MatTooltipModule,
     MatTreeModule,
+    NgxUploaderModule,
     RouterModule.forRoot([
       {path: '', component: JsonEditorComponent},
       {path: 'search', component:AppComponent}
